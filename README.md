@@ -13,3 +13,9 @@ The Elsevier Delivery – ISM CAR Automation project is a powerful automation so
             * 📤 Production-Ready Output: Clean, validated datasets exported for use in downstream production workflows.
             
 
+🧩 Technologies & Tools Used
+            * Python (BeautifulSoup, Requests, Selenium)
+            * JSON / XML Parsing
+            * Excel Automation (openpyxl, pandas)
+            * API Integration
+            * CAPTCHA Solving Libraries
