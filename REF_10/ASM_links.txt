@@ -1,0 +1,15 @@
+https://journals.asm.org/journal/aem,76193499
+https://journals.asm.org/journal/aac,76216199 
+https://journals.asm.org/journal/iai,76412899
+https://journals.asm.org/journal/jcm,76437099 
+https://journals.asm.org/journal/jb,76465899 
+https://journals.asm.org/journal/jvi,76473499 
+https://journals.asm.org/journal/cmr,76725499 
+https://journals.asm.org/journal/mmbr,77017799 
+https://journals.asm.org/journal/cvi,78744399 
+https://journals.asm.org/journal/mbio,263711999
+https://journals.asm.org/journal/ecosalplus,63526261
+https://journals.asm.org/loi/spectrum,643108415
+https://journals.asm.org/journal/msystems,66663590
+https://journals.asm.org/journal/msphere,90711210
+https://journals.asm.org/journal/mra,913279999

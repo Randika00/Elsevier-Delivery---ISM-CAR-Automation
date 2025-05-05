@@ -1,0 +1,7 @@
+https://onepetro.org/DC/issue,77202999
+https://onepetro.org/REE/issue,77203099
+https://onepetro.org/JPT/issue/,77456799
+https://onepetro.org/SJ/issue/,77575099
+https://onepetro.org/JCPT/issue,77634899
+https://onepetro.org/PO/issue,78781299
+https://onepetro.org/JSPD/issue,317971699

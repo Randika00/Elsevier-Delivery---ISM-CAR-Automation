@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="IE=Edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+<title>Validate User</title>
+<link href="//ajot2.silverchair-cdn.com/Themes/Client/app/img/favicons/favicon.ico" rel="icon"/>
+<style type="text/css">
+
+        body {
+            margin: 0 .5rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .container {
+            padding-top: 2rem;
+            max-width: 350px;
+            margin: auto;
+        }
+
+        .container .explanation-message {
+            margin: 2rem 0;
+            font-family: "Source Sans Pro",sans-serif, Helvetica, Aria;
+        }
+
+        .container .button {
+            margin-top: 2rem;
+            -webkit-appearance: none;
+            font-family: "Source Sans Pro",sans-serif, Helvetica, Aria;
+            font-size: 1rem;
+            font-weight: bold;
+            background: #2880ba;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            padding: .75rem 1rem;
+            line-height: 1em;
+            display: inline-block;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        #captcha>div {
+            margin: 0 auto;
+        }
+
+        
+    </style>
+</meta></head>
+<body>
+<div class="container">
+<img alt="" class="governor-site-logo" src=""/>
+<div>
+<div class="explanation-message">
+                We are sorry, but we are experiencing unusual traffic at this time. Please help us confirm that you are not a robot and we will take you to your content.
+            </div>
+<script>
+                var SCM = SCM || {};
+                
+                SCM.Captcha = (function () {
+                
+                    var _simpleCaptchaResponseIdentifier = '#txtCaptchaInputId';
+                    var _googleReCaptchaResponseIdentifier = '.g-recaptcha-response'; 
+                
+                    return {
+                        Init : init,
+                        GetCaptchaResponse : getCaptchaResponse,
+                        ResetCaptcha : resetCaptcha
+                    };
+                
+                    // initializes the gRecaptcha v2 js
+                    // returns true if init succeeds, false otherwise (helps with debugging)
+                    function init(captchaModelSiteKey) {
+                        
+                        if (window.grecaptcha !== undefined && window.grecaptcha !== null) {
+                            window.grecaptcha.render('captcha', {'sitekey': captchaModelSiteKey });
+                            return true;
+                        }
+                        return false;
+                    }
+                
+                    // returns the detected captcha response, empty string otherwise\
+                    function getCaptchaResponse($formContainer) {
+                        
+                        var element = $formContainer.find(_simpleCaptchaResponseIdentifier);
+                
+                        if (element.is(':visible')) {
+                            return element.val();
+                        }
+                        
+                        element = $formContainer.find(_googleReCaptchaResponseIdentifier);
+                
+                        if (element.length) {
+                            return element.val();
+                        }
+                
+                        return '';
+                    }
+                    
+                    // resets the google captcha (if it exists)
+                    function resetCaptcha($formContainer) {
+                        var element = $formContainer.find(_googleReCaptchaResponseIdentifier);
+                
+                        if (element.length) {
+                            // grecaptcha is loaded by ajax response from third party
+                            // see ReCaptcha.cshtml 
+                            window.grecaptcha.reset();
+                        }
+                    }
+                
+                })();
+                </script>
+<div class="widget-ReCaptcha widget-instance-Captcha_AmericanOccupationalTherapyAssociation2">
+<div data-captchakey="6LcrtosaAAAAADRnMjagCVGiuXgoXFWysds7VKsG" data-fallback-captcha-key="" id="captcha"></div>
+<div class="captchaAlert" style="color: #c60f13; display: none">
+            Could not validate captcha.  Please try again.
+        </div>
+<script type="text/javascript">
+                var onloadCallback = function() {
+                    SCM.Captcha.Init('6LcrtosaAAAAADRnMjagCVGiuXgoXFWysds7VKsG');
+                };
+            </script>
+<script async="" defer="" src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit&amp;hl=en">
+</script>
+<input id="recaptchaWidgetInstance" type="hidden" value="Captcha_AmericanOccupationalTherapyAssociation2"/>
+<input id="recaptchaUseV3" type="hidden" value="False"/>
+</div>
+<form id="captchaForm" method="post">
+<input name="content" type="hidden" value="/ajot/article/78/2/7802050010/25065/Cautioning-the-Role-of-Occupational-Therapy-in"/>
+<input id="userCaptchaResponse" name="userCaptchaResponse" type="hidden"/>
+<div class="btn-wrap">
+<button class="button" id="btnSubmit">Take me to my Content</button>
+</div>
+</form>
+</div>
+</div>
+<script>
+        var btnSubmit = document.getElementById('btnSubmit');
+        var txtCaptchaInputId = document.getElementById('txtCaptchaInputId');
+
+        btnSubmit.onclick = function () {
+            handleCaptchaResponse();
+        }
+
+        if (txtCaptchaInputId !== null) {
+            txtCaptchaInputId.onkeyup = function (e) {
+
+                var keyCode = (e.which || e.keyCode);
+
+                if (keyCode === 13) {
+                    handleCaptchaResponse();
+                }
+                return false;
+            }
+        }
+
+        function handleCaptchaResponse() {
+            var userCaptchaResponse = document.getElementById('userCaptchaResponse');
+            var userResponse = ((txtCaptchaInputId === null) ? grecaptcha.getResponse() : txtCaptchaInputId.value);
+            if (userResponse !== '') {
+                userCaptchaResponse.value = userResponse;
+                document.getElementById('captchaForm').submit();
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
