@@ -1,0 +1,4 @@
+https://journals.ametsoc.org/view/journals/bams/bams-overview.xml, 77078099
+https://journals.ametsoc.org/view/journals/clim/clim-overview.xml, 77132099
+https://journals.ametsoc.org/view/journals/atsc/atsc-overview.xml, 77142999
+https://journals.ametsoc.org/view/journals/mwre/mwre-overview.xml, 77260799

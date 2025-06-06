@@ -1,0 +1,2 @@
+https://scipost.org/SciPostPhys/issues, 925212005
+https://scipost.org/SciPostPhysCore/issues, 939594942
