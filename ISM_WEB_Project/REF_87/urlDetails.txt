@@ -1,0 +1,6 @@
+https://www.scielo.br/j/ramb/grid,76611499
+https://www.scielo.br/j/pvb/grid,78079299
+https://www.scielo.br/j/mr/grid,78463099
+https://www.scielo.br/j/coluna/grid,79162699
+https://www.scielo.br/j/paideia/grid,290362499
+https://www.scielo.br/j/urbe/grid,644487417
